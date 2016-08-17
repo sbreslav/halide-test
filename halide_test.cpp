@@ -303,7 +303,7 @@ int main(int argc, char **argv) {
 
 bool have_opencl_or_metal() {
 #ifdef _WIN32
-	return LoadLibrary("OpenCL64.dll") != NULL;
+	return true;//return LoadLibrary("OpenCL.dll") != NULL;
 #elif __APPLE__
 	return dlopen("/System/Library/Frameworks/Metal.framework/Versions/Current/Metal", RTLD_LAZY) != NULL;
 #else

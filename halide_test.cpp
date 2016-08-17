@@ -194,7 +194,7 @@ public:
 		// flag. This is helpful for figuring out which stages are
 		// slow, or when CPU -> GPU copies happen. It hurts
 		// performance though, so we'll leave it commented out.
-		// target.set_feature(Target::Debug);
+		target.set_feature(Target::Debug);
 
 		curved.compile_jit(target);
 	}
@@ -221,7 +221,7 @@ public:
 			double t1 = current_time();
 
 			// Run the filter 100 times.
-			for (int j = 0; j < 100; j++) {
+			for (int j = 0; j < 1000; j++) {
 				curved.realize(output);
 			}
 
